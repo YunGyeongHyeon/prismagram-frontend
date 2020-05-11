@@ -13,9 +13,9 @@ const Container = styled.input`
   height: 35px;
   padding: 0 15px;
   font-size: 12px;
-  margin-bottom: 15px;
   &::placeholder {
     opacity: 0.7;
+    font-weight: 400px;
   }
   &:focus {
     animation-name: focusColor;
@@ -37,9 +37,11 @@ const Input = ({
   required = true,
   value,
   onChange,
-  type = "text"
+  type = "text",
+  className
 }) => (
   <Container
+    className={className}
     placeholder={placeholder}
     required={required}
     value={value}
